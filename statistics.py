@@ -1,4 +1,3 @@
-import numpy as np
 
 def calculateStats(numbers):
     if len(numbers) != 0:
@@ -8,5 +7,6 @@ def calculateStats(numbers):
         stats = {"avg":avg,"max":max1,"min":min1}
     
     else:
-        stats = {"avg":np.nan,"max":np.nan,"min":np.nan}
+        stats = {"avg":float("NaN"),"max":float("NaN"),"min":float("NaN")}
+        
     return stats
