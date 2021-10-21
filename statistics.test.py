@@ -20,14 +20,14 @@ class StatsTest(unittest.TestCase):
     self.assertTrue(math.isnan(computedStats["max"]))
     self.assertTrue(math.isnan(computedStats["min"]))
 
-#   def test_raise_alerts_when_max_above_threshold(self):
-#     emailAlert = EmailAlert()
-#     ledAlert = LEDAlert()
-#     maxThreshold = 10.5
-#     statsAlerter = StatsAlerter(maxThreshold, [emailAlert, ledAlert])
-#     statsAlerter.checkAndAlert([22.6, 12.5, 3.7])
-#     self.assertTrue(emailAlert.emailSent)
-#     self.assertTrue(ledAlert.ledGlows)
+  def test_raise_alerts_when_max_above_threshold(self):
+    emailAlert = EmailAlert()
+    ledAlert = LEDAlert()
+    maxThreshold = 10.5
+    statsAlerter = StatsAlerter(maxThreshold, [emailAlert, ledAlert])
+    statsAlerter.checkAndAlert([22.6, 12.5, 3.7])
+    self.assertTrue(emailAlert.emailSent)
+    self.assertTrue(ledAlert.ledGlows)
 
     
     
